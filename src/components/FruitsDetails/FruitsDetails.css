@@ -1,0 +1,15 @@
+
+.style{
+    height: 150px;
+ }
+
+ .bg-color{
+    background-color: aqua;
+ }
+
+ 
+ .btn_style{
+    display: flex;
+    justify-content: center;
+   align-items: center;
+ }
