@@ -27,6 +27,9 @@ const Header = () => {
                      <li>
                          <Link className="nav_link" to="/checkOut">CheckOut</Link>
                      </li>
+                     <li>
+                         <Link className="nav_link" to="/addProducts">AddProducts</Link>
+                     </li>
                  </ul>
           </nav>
      </div>

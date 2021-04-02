@@ -9,6 +9,7 @@ import Home from './components/Home/Home';
 import Header from './components/Header/Header';
 import Login from "./components/Login/Login";
 import CheckOut from './components/CheckOut/CheckOut';
+import AddProducts from './components/AddProducts/AddProducts';
 function App() {
   return (
     <div className="app">
@@ -26,6 +27,9 @@ function App() {
           </Route>
           <Route path="/fruits/:id">
               <CheckOut/>
+          </Route>
+          <Route path="/addProducts">
+              <AddProducts/>
           </Route>
         </Switch>
       </Router>

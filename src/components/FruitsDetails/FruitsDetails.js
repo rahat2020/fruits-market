@@ -1,12 +1,11 @@
 import React from 'react';
 import { Card, Button, Col } from 'react-bootstrap';
-
 import './FruitsDetails.css';
 import { Link } from 'react-router-dom';
-import CheckOut from '../CheckOut/CheckOut';
-import { useState } from 'react';
+
 const FruitsDetails = (props) => {
     const { name, imgurl, id, price, description } = props.fruits
+    console.log(props.fruits)
     return (
         <div>
             <Col style={{ marginLeft: '50px' }}>
