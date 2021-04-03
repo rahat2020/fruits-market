@@ -51,6 +51,7 @@ ul{
 .navbar_nav ul li {
    list-style: none;
    font-size: 15px;
+   padding: 5px;
    font-weight: bolder;
    text-transform: uppercase;
    color: black;

@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import './AddProducts.css';
-import { useForm } from "react-hook-form";
+// import { useForm } from "react-hook-form";
 import axios from 'axios';
+import { useLocation } from 'react-router';
 
 const AddProducts = () => {
-
+    const location = useLocation
     // const { register, handleSubmit, watch, errors } = useForm();
     //  const [imgURL, setImgURL] = useState(null)
     const [items, setItems] = useState({
@@ -41,7 +42,7 @@ const AddProducts = () => {
 
     const handleAddProduct = e => {
         e.preventDefault(true);
-        if (items.imgURL == '') {
+        if (items.imgURL !== '') {
             console.log(items)
             const url = `http://localhost:3300/addProduct`
             fetch(url, {
@@ -96,17 +97,17 @@ const AddProducts = () => {
         <Form style={{ width: '600px', margin: 'auto' }}>
             <Form.Group controlId="formBasicEmail">
                 <Form.Label>Product Name</Form.Label>
-                <Form.Control type="email" onBlur={handleChange} placeholder="items name" name="name" />
+                <Form.Control type="email" onBlur={handleChange} placeholder="items name" name="itemName" />
             </Form.Group>
             <Form.Group controlId="formBasicPassword">
                 <Form.Label>Product price</Form.Label>
-                <Form.Control type="text" onBlur={handleChange} placeholder="items price" name="price" />
+                <Form.Control type="text" onBlur={handleChange} placeholder="items price" name="itemPrice" />
             </Form.Group>
             <Form.Group controlId="formBasicCheckbox">
                 <Form.Check type="file" onChange={handleImgUpload} />
             </Form.Group>
             {
-                items.imgURL === '' ? <Button variant="primary" type="submit" onClick={handleAddProduct}>
+                items.imgURL !== '' ? <Button variant="primary" type="submit" onClick={handleAddProduct}>
                     AddProduct
                   </Button> : <Button variant="primary" type="submit" onClick={handleAddProduct}>
                     AddProduct
