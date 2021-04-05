@@ -10,15 +10,18 @@ h3{
 }
 Button{
     padding: 10px;
-    border-radius: 40px;
+    border: none;
+    border-radius: 5px;
     font-weight: bold;
-    background-color: aqua;
-    justify-content: space-between;
+    background-color: tomato;
+    /* justify-content: space-between; */
+
     
     
 }
 
 Button:hover{
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
     background:tomato;
     border-radius: 40px;
     color: whitesmoke;

@@ -46,7 +46,7 @@ const Order = () => {
                                 <td>{itemOrder.product?.itemName}</td>
                                 <td>{itemOrder.product?.itemPrice}</td>
                                 <td className="imgStyle"><Image src={itemOrder.product?.imgURL} rounded /></td>
-                            </tr>
+                                </tr>
                                ))
                            }
                            

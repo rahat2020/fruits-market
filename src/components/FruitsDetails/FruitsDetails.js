@@ -22,7 +22,6 @@ const FruitsDetails = (props) => {
 
                             </div>
                         </div>
-                        {/* <div className="text-center"> </div> */}
                     </Card.Body>
                 </Card>
             </Col>
