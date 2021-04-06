@@ -13,7 +13,7 @@ const Order = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:3300/ordered?email=' + loggedInUser.email)
+        fetch('https://sleepy-lake-14555.herokuapp.com/ordered?email=' + loggedInUser.email)
             .then(response => response.json())
             .then(data => setOrder(data))
 

@@ -6,11 +6,11 @@ import 'react-pro-sidebar/dist/css/styles.css';
 import { Link, useParams } from 'react-router-dom';
 const Admin = () => {
     const [deleteItems, setDeleteItems] = useState([])
-    const [admin, setAdmin] = useState([])
+    // const [admin, setAdmin] = useState([])
     const { _id } = useParams();
     // console.log(_id)
     useEffect(() => {
-        const url = `http://localhost:3300/products`;
+        const url = `https://sleepy-lake-14555.herokuapp.com/products`;
         fetch(url)
             .then(res => res.json())
             .then(data =>
@@ -24,7 +24,7 @@ const Admin = () => {
 
     const handleDeleteItems = (id) => {
 
-        fetch(`http://localhost:3300/deleteItems/${id}`, {
+        fetch(`https://sleepy-lake-14555.herokuapp.com/deleteItems/${id}`, {
             method: 'DELETE'
         })
             .then(res => {

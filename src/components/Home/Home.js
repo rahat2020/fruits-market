@@ -1,20 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import { Row } from 'react-bootstrap';
+import { Row, Spinner } from 'react-bootstrap';
 import FruitsDetails from '../FruitsDetails/FruitsDetails';
-import CircularProgress from '@material-ui/core/CircularProgress';
+// import CircularProgress from '@material-ui/core/CircularProgress';
 import './Home.css';
 const Home = () => {
     const [item, setItem] = useState({})
-    const [spinner, setSpinner] = useState(true)
+    // const [spinner, setSpinner] = useState(true)
     useEffect(() => {
-        const url = `http://localhost:3300/products`;
+        const url = `https://sleepy-lake-14555.herokuapp.com/products`;
         fetch(url)
             .then(res => res.json())
             .then(data =>
-                {setItem(data)
-                setSpinner(false)
-                }
-            )
+                setItem(data))
 
     }, [])
     console.log(item);
@@ -22,15 +19,14 @@ const Home = () => {
         <div>
             
             <Row>
-            {
-                item.length === 0 && <div className="d-flex justify-content-center align-items-center">
+        
+                {
+                    item.length > 0 ? item.map(items => <FruitsDetails items={items} key={items._id}></FruitsDetails>):
+                    <div className="d-flex justify-content-center col-md-12 ">
                     <div className="spinner-border" role="status">
-                        <span className="visually-hidden">Loading...</span>
+                        <span className="visually-hidden">loading...</span>
                     </div>
                 </div>
-            }
-                {
-                    item.length > 0 && item.map(items => <FruitsDetails items={items} key={items._id}></FruitsDetails>)
                 }
             </Row>
 

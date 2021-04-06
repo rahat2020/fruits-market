@@ -8,18 +8,15 @@ const FruitsDetails = (props) => {
     // console.log(props.items)
     return (
         <div>
-            <Col style={{ marginLeft: '50px' }}>
+            <Col style={{ marginLeft: '62px'  }} className="mt-3">
                 <Card style={{ width: '18rem', margin: '30px' }}>
                     <Card.Img className="style" variant="top" src={imgURL} />
                     <Card.Body>
                         <div className="text-center ">
                             <Card.Title>{itemName}</Card.Title>
-
-                            <div className=" d-flex justify-content-between button-style ">
-
-                                <span><strong>${itemPrice}</strong></span>
+                            <div className=" d-flex justify-content-between button-style mt-3">
+                                 <span><strong>${itemPrice}</strong></span>
                                 <Link to={`/checkOut/${_id}`}><Button className="text-center btn_style" variant="primary">Buy now</Button></Link>
-
                             </div>
                         </div>
                     </Card.Body>

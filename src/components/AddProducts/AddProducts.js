@@ -44,7 +44,7 @@ const AddProducts = () => {
         e.preventDefault(true);
         if (items.imgURL !== '') {
             console.log(items)
-            const url = `http://localhost:3300/addProduct`
+            const url = `https://sleepy-lake-14555.herokuapp.com/addProduct`
             fetch(url, {
                 method: 'POST',
                 headers: {
@@ -66,7 +66,7 @@ const AddProducts = () => {
         //     price:e.price,
         // }
         // console.log(productData);
-        // const url =`http://localhost:3300/addProduct`;
+        // const url =`https://sleepy-lake-14555.herokuapp.com/addProduct`;
 
         // fetch(url, {
         //     method: 'POST',

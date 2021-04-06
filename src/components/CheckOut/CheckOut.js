@@ -15,7 +15,7 @@ const CheckOut = () => {
 
     const handleSubmit = () =>{
         const items = {...loggedInUser, product: checkOutDetails, date: new Date()}
-        const url = `http://localhost:3300/itemOrdered`
+        const url = `https://sleepy-lake-14555.herokuapp.com/itemOrdered`
             fetch(url, {
                 method: 'POST',
                 headers: {
@@ -33,7 +33,7 @@ const CheckOut = () => {
 
 
     useEffect(() => {
-        const url = `http://localhost:3300/products`;
+        const url = `https://sleepy-lake-14555.herokuapp.com/products`;
         fetch(url)
             .then(res => res.json())
             .then(data => setCheckout(data))
